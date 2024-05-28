@@ -27,7 +27,7 @@ export const navItems = [
     {
       id: 1,
       title: "Free Shipping",
-      Description: "From all orders over 100$",
+      Description: "From all orders over ₹499",
       icon: (
         <svg
           width="36"
@@ -191,65 +191,65 @@ export const navItems = [
   export const categoriesData = [
     {
       id: 1,
-      title: "Computers and Laptops",
+      title: "Hand Tools",
       subTitle: "",
       image_Url:
-        "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+        "https://bpb-us-e2.wpmucdn.com/sites.up.edu/dist/3/176/files/2015/10/4c9239b56c294.png",
     },
     {
       id: 2,
-      title: "cosmetics and body care",
+      title: "Plumbing & Pipes",
       subTitle: "",
       image_Url:
-        "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+        "https://5.imimg.com/data5/SELLER/Default/2022/11/XA/KC/IU/4034700/upvc-pipes-500x500.jpg",
     },
     {
       id: 3,
-      title: "Accesories",
+      title: "Machine Tools",
       subTitle: "",
       image_Url:
-        "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+        "https://5.imimg.com/data5/FU/YB/UW/SELLER-54447673/custom-clearance-for-machinery-tools-hardware-500x500.jpg",
     },
     {
       id: 4,
-      title: "Cloths",
+      title: "Garden Equipment",
       subTitle: "",
       image_Url:
-        "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+        "https://5.imimg.com/data5/SELLER/Default/2021/5/SO/RI/ZW/4452738/main-500x500.jpeg",
     },
     {
       id: 5,
-      title: "Shoes",
+      title: "Nut-Bolts",
       subTitle: "",
       image_Url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+        "https://5.imimg.com/data5/HV/JT/MY-60514539/8mm-mild-steel-hex-nut-bolt-500x500.jpg",
     },
     {
       id: 6,
-      title: "Gifts",
+      title: "Plywood & Mica",
       subTitle: "",
       image_Url:
-        "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+        "https://5.imimg.com/data5/NP/HE/MY-61727003/wooden-plywood-1000x1000.jpg",
     },
     {
       id: 7,
-      title: "Pet Care",
+      title: "Measuring and Marking Tools",
       subTitle: "",
-      image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+      image_Url: "https://i.pngimg.me/thumb/f/720/5701310431100928.jpg",
     },
     {
       id: 8,
-      title: "Mobile and Tablets",
+      title: "Finishing Tools",
       subTitle: "",
       image_Url:
-        "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+        "https://img.freepik.com/premium-photo/safety-equipment-hardhat-goggle-gloves-eye-protection_488220-4577.jpg?w=1380",
     },
     {
       id: 9,
-      title: "Music and Gaming",
+      title: "Safety Equipment",
       subTitle: "",
       image_Url:
-        "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+        "https://media.istockphoto.com/id/953458944/vector/tools-box-icon-concept-web-buttons-vector-illustration-flat-design-style.jpg?s=2048x2048&w=is&k=20&c=KjnWmFCYfF_GJdM5a1DnEHAnQDmXViBCFcQsayuFUPo=",
     },
     {
       id: 10,
@@ -264,8 +264,8 @@ export const navItems = [
   export const productData = [
     {
       id: 1,
-      category:"Computers and Laptops",
-      name: "MacBook pro M2 chipset 256gb ssd 8gb ram space-gray color with apple 1 year warranty",
+      category: "Hand Tool",
+      name: "Spanner",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
       image_Url: [
@@ -279,10 +279,10 @@ export const navItems = [
         },
       ],
       shop: {
-        name: "Apple inc.",
+        name: "Kerela Store",
         shop_avatar: {
           public_id: "test",
-          url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+          url: "",
         },
         ratings: 4.2,
       },
@@ -293,11 +293,10 @@ export const navItems = [
       stock: 10,
     },
     {
-      id: 2,
-      category:"Mobile and Tablets",
-      name: "Iphone 14 pro max 256 gb ssd and 8 gb ram silver colour",
-      description:
-        "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      id: 1,
+      category: "Hand Tools",
+      name: "Spanner",
+      description: "",
       image_Url: [
         {
           public_id: "test",
@@ -309,22 +308,21 @@ export const navItems = [
         },
       ],
       shop: {
-        name: "Amazon Ltd",
+        name: "Kerela Store",
         shop_avatar: {
           public_id: "test",
           url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
         },
         ratings: 4.2,
       },
-      discount_price: 1099,
+
       rating: 5,
-      total_sell: 80,
-      stock: 10,
-      category:"Mobile & Tablets"
+
+      category: "Hand Tools",
     },
     {
       id: 1,
-      category:"Computers and Laptop",
+      category: "",
       name: "MacBook pro M2 chipset 256gb ssd 8gb ram space gray color with apple 1 year warranty",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
@@ -351,11 +349,11 @@ export const navItems = [
       rating: 4,
       total_sell: 75,
       stock: 10,
-      category:"Computers & Laptop"
+      category: "Computers & Laptop",
     },
     {
       id: 4,
-      category:"Others",
+      category: "Others",
       name: "New Fashionable Watch for men 2023 with multiple colors",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
@@ -376,7 +374,7 @@ export const navItems = [
           url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
         },
         ratings: 4.2,
-      category:"Others"
+        category: "Others",
       },
       price: 100,
       discount_price: 79,
@@ -386,8 +384,8 @@ export const navItems = [
     },
     {
       id: 5,
-      category:"Shoes",
-      name: "New Trend shoes for gents with all sizes",
+      category: "Nut-Bolts",
+      name: "Nut-Bolts",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
       image_Url: [
@@ -401,7 +399,7 @@ export const navItems = [
         },
       ],
       shop: {
-        name: "Alisha Shoes Mart",
+        name: "Kerela Store",
         shop_avatar: {
           public_id: "test",
           url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -413,7 +411,7 @@ export const navItems = [
       rating: 5,
       total_sell: 49,
       stock: 10,
-      category:"Shoes"
+      category: "Shoes",
     },
     {
       id: 1,
@@ -431,10 +429,10 @@ export const navItems = [
         },
       ],
       shop: {
-        name: "Asus Ltd",
+        name: "Kerela Store",
         shop_avatar: {
           public_id: "test",
-          url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+          url: "",
         },
         ratings: 4.2,
       },
@@ -443,16 +441,14 @@ export const navItems = [
       rating: 4.5,
       reviews: [
         {
-          user: {
-            // user object will be here
-          },
+          user: {},
           comment: "IT's so cool!",
           rating: 5,
         },
       ],
       total_sell: 20,
       stock: 10,
-      category:"Music and Gaming"
+      category: "Music and Gaming",
     },
     {
       id: 4,
@@ -485,7 +481,7 @@ export const navItems = [
     },
     {
       id: 1,
-      name: "Gaming Headphone Asus with mutiple color and free delivery",
+      name: "Hand Tools",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
       image_Url: [
@@ -512,10 +508,9 @@ export const navItems = [
       reviews: [
         {
           user: {
-            // user object will be here
+            comment: "IT's so cool!",
+            rating: 5
           },
-          comment: "IT's so cool!",
-          rating: 5,
         },
       ],
       total_sell: 20,
@@ -523,7 +518,7 @@ export const navItems = [
     },
     {
       id: 2,
-      category:"Mobile and Tablets",
+      category: "Mobile and Tablets",
       name: "Iphone 14 pro max 256 gb ssd and 8 gb ram silver colour",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
@@ -552,7 +547,7 @@ export const navItems = [
     },
     {
       id: 1,
-      category:"Music and Gaming",
+      category: "Music and Gaming",
       name: "Gaming Headphone Asus with mutiple color and free delivery",
       description:
         "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
@@ -597,15 +592,14 @@ export const navItems = [
       link: "/about"
     },
     {
-      name: "Careers",
-      link: "/carrers"
+      name: "Profile",
+      link: "/profile"
     },
     {
       name: "Store Locations",
+      link:""
     },
-    {
-      name: "Our Blog",
-    },
+ 
     {
       name: "Reviews",
     },
@@ -613,37 +607,42 @@ export const navItems = [
   
   export const footercompanyLinks = [
     {
-      name: "Game & Video",
+      name: "Best Selling",
+      link: "/best-selling"
     },
     {
-      name: "Phone &Tablets",
+      name: "Products",
+      link: "products"
     },
-    {
-      name: "Computers & Laptop",
-    },
-    {
-      name: "Sport Watches",
-    },
+    
+ 
     {
       name: "Events",
+      link:"/events"
     },
+  
   ];
   
-  export const footerSupportLinks = [
-    {
-      name: "FAQ",
-    },
-    {
-      name: "Reviews",
-    },
-    {
-      name: "Contact Us",
-    },
-    {
-      name: "Shipping",
-    },
-    {
-      name: "Live chat",
-    },
-  ];
+export const footerSupportLinks = [
+  {
+    name: "FAQ",
+    link: "/faq",
+  },
+
+  {
+    name:"Shipping Vendor",
+    link: "/user/track/order/:id",
+  },
+  {
+    name: "Contact Us",
+  },
+  {
+    name: "Shop Preview",
+    link: "/shop/preview/:id",
+  },
+  {
+    name: "Live chat",
+    link: "/inbox",
+  },
+];
   

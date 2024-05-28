@@ -21,8 +21,8 @@ const DropDown = ({ categoriesData, setDropDown }) => {
             <img
               src={i.image_Url}
               style={{
-                width: "25px",
-                height: "25px",
+                width: "40px",
+                height: "45px",
                 objectFit: "contain",
                 marginLeft: "10px",
                 userSelect: "none",

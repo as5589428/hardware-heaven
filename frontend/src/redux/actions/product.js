@@ -88,6 +88,7 @@ export const deleteProduct = (id) => async (dispatch) => {
     dispatch({
       type: "deleteProductFailed",
       payload: error.response.data.message,
+    
     });
   }
 };
