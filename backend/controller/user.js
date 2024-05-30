@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://:3000/activation/${activationToken}`;
+    const activationUrl = `https://hardware-heaven-app.vercel.app/activation/${activationToken}`;
 
     try {
       await sendMail({
