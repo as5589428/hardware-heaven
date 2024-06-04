@@ -235,7 +235,8 @@ export const navItems = [
       id: 7,
       title: "Measuring and Marking Tools",
       subTitle: "",
-      image_Url: "https://i.pngimg.me/thumb/f/720/5701310431100928.jpg",
+      image_Url:
+        "https://5.imimg.com/data5/QR/DE/MY-8113527/measuring-tool-1000x1000.jpg",
     },
     {
       id: 8,
@@ -349,7 +350,7 @@ export const navItems = [
       rating: 4,
       total_sell: 75,
       stock: 10,
-      category: "Computers & Laptop",
+      category: "Plumbing & Pipes ",
     },
     {
       id: 4,
@@ -509,7 +510,7 @@ export const navItems = [
         {
           user: {
             comment: "IT's so cool!",
-            rating: 5
+            rating: 5,
           },
         },
       ],

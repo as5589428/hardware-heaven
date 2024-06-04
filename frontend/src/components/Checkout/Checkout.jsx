@@ -234,7 +234,7 @@ const ShippingInfo = ({
               onChange={(e) => setCity(e.target.value)}
             >
               <option className="block pb-2" value="">
-                Choose your City
+                Choose your State
               </option>
               {State &&
                 State.getStatesOfCountry(country).map((item) => (
