@@ -4,6 +4,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const PORT = 8000
 // const path = require("path");
 
 app.use(
@@ -19,7 +20,6 @@ app.use(cookieParser());
 app.use("/test", (req, res)=> {
   res.send("Hello world!");
 });
-
 
 
 
