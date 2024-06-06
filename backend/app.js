@@ -5,7 +5,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = 8000
-// const path = require("path");
+const path = require("path");
 
 app.use(
   cors({
@@ -16,7 +16,7 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
-// app.use(express.static(__dirname, "./uploads"));
+app.use("/test",express.static(path.join(__dirname, "./uploads")));
 app.use("/test", (req, res)=> {
   res.send("Hello world!");
 });
