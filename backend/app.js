@@ -9,7 +9,7 @@ const path = require("path");
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://hardware-heaven-app1.vercel.app/",
     credentials: true,
   })
 );
