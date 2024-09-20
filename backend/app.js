@@ -6,11 +6,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = 8000
 const path = require("path");
+// var app = express();
 
 app.use(
   cors({
-    origin: "https://hardware-heaven-app1.vercel.app/",
-    methods:["POST","GET"],
+    origin: "http://localhost:3000", //Aws Server ip Frontend e.g 3000
+    methods:["POST","GET"],   
     credentials: true,
   })
 );

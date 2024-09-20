@@ -60,7 +60,7 @@ io.on("connection", (socket) => {
     const user = getUser(receiverId);
 
     // Store the messages in the `messages` object
-    if (!messages[receiverId]) {
+    if (!messages[receiverId]) { x
       messages[receiverId] = [message];
     } else {
       messages[receiverId].push(message);

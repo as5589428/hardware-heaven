@@ -16,10 +16,11 @@ const CountDown = ({ data }) => {
       typeof timeLeft.minutes === 'undefined' &&
       typeof timeLeft.seconds === 'undefined'
     ) {
-      axios.delete(`${server}/event/delete-shop-event/${data._id}`);
+      // axios.delete(`${server}/event/delete-shop-event/${data._id}`); //under testing 
     }
     return () => clearTimeout(timer);
-  });
+  },[]);
+  //yaha per dependencies missing hai !     <--- sanket
 
   function calculateTimeLeft() {
     const difference = +new Date(data.Finish_Date) - +new Date();

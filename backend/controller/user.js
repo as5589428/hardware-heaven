@@ -35,8 +35,8 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `https://hardware-heaven-app1.vercel.app/activation/${activationToken}`;
-
+    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+//Aws link Will be here frontend Port
     try {
       await sendMail({
         email: user.email,
@@ -137,6 +137,8 @@ router.get(
   catchAsyncErrors(async (req, res, next) => {
     try {
       const user = await User.findById(req.user.id);
+      console.log(user);
+      
 
       if (!user) {
         return next(new ErrorHandler("User doesn't exists", 400));
