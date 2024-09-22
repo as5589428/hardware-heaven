@@ -466,14 +466,7 @@ export const navItems = [
           url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
         },
       ],
-      shop: {
-        name: "Shahriar Watch House",
-        shop_avatar: {
-          public_id: "test",
-          url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
-        },
-        ratings: 4.2,
-      },
+  
       price: 100,
       discount_price: 79,
       rating: 4,
