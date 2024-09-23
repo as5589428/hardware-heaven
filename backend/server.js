@@ -5,9 +5,25 @@ const cloudinary = require("cloudinary");
 
 
 
+// app.use("/", (req, res) => {
+//   res.send("Hello world from server.js");
+// });
+app.use(express.json());
+// const __dirname=path.dirname("")
+const buildpath = path.join(__dirname,"../frontend/build")
+app.use(express.static(buildpath));
+// app.use(express.static(buildpath));
 app.use("/", (req, res) => {
-  res.send("Hello world from server.js");
+  res.send("Hello world from app.js!");
 });
+app.use(cookieParser());
+app.use(
+  cors({
+   "origin": "*", //Aws Server ip Frontend e.g 3000
+    methods:["POST","GET"],   
+    credentials: true,
+  })
+);
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
