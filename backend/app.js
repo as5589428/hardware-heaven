@@ -4,7 +4,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+const path = require("path");
 app.use(express.json());
 // const __dirname=path.dirname("")
 const buildpath = path.join(__dirname,"../frontend/build")
