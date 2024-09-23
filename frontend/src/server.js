@@ -1,4 +1,4 @@
-export const server = "http://hardware-heaven-app1.vercel.app/api/v2";
+export const server = "http://hardware-heaven-backendvgt-aman.onrender.com/api/v2";
 
-export const backend_url = "http://hardware-heaven-app1.vercel.app";
+export const backend_url = "http://hardware-heaven-backendvgt-aman.onrender.com/";
 
