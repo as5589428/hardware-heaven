@@ -5,6 +5,26 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+
+
+app.use(express.json());
+// const __dirname=path.dirname("")
+const buildpath = path.join(__dirname,"../frontend/build")
+app.use(express.static(buildpath));
+// app.use(express.static(buildpath));
+app.use("/test", (req, res) => {
+  res.send("Hello world from app.js!");
+});
+app.use(cookieParser());
+app.use("/",express.static("uploads"));
+app.use(
+  cors({
+   "origin": "*", //Aws Server ip Frontend e.g 3000
+    methods:["POST","GET"],   
+    credentials: true,
+  })
+);
+
 app.use(cors({
   origin: 'https://hardware-heaven-app1.vercel.app/',
   credentials: true
