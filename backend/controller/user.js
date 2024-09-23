@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `https://hardware-heaven-backend.vercel.app/activation/${activationToken}`;
+    const activationUrl = `https://hardware-heaven-app1.vercel.app/activation/${activationToken}`;
 //Aws link Will be here frontend Port
     try {
       await sendMail({
