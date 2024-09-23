@@ -2,43 +2,90 @@ import axios from "axios";
 import { server } from "../../server";
 
 // load user
+// export const loadUser = () => async (dispatch) => {
+//   try {
+//     dispatch({
+//       type: "LoadUserRequest",
+//     });
+//     const { data } = await axios.get(`${server}/user/getuser`, {
+//       withCredentials: true,
+//     });
+//     dispatch({
+//       type: "LoadUserSuccess",
+//       payload: data.user,
+//     });
+//   } catch (error) {
+//     dispatch({
+//       type: "LoadUserFail",
+//       payload: error.response.data.message,
+//     });
+//   }
+// };
 export const loadUser = () => async (dispatch) => {
   try {
-    dispatch({
-      type: "LoadUserRequest",
-    });
+    dispatch({ type: "LoadUserRequest" });
+
     const { data } = await axios.get(`${server}/user/getuser`, {
       withCredentials: true,
     });
+
     dispatch({
       type: "LoadUserSuccess",
       payload: data.user,
     });
   } catch (error) {
+    let errorMessage;
+
+    if (error.response) {
+      // Server responded with a status other than 2xx
+      errorMessage = error.response.data.message || 'Server error occurred.';
+    } else if (error.request) {
+      // Request was made but no response was received
+      errorMessage = 'No response received from server. Please check your network connection.';
+    } else {
+      // Something happened in setting up the request
+      errorMessage = error.message || 'An unknown error occurred.';
+    }
+
+    // Log the error for debugging
+    console.error('Error loading user:', error);
+
     dispatch({
       type: "LoadUserFail",
-      payload: error.response.data.message,
+      payload: errorMessage,
     });
   }
 };
-
 // load seller
 export const loadSeller = () => async (dispatch) => {
   try {
-    dispatch({
-      type: "LoadSellerRequest",
-    });
+    dispatch({ type: "LoadSellerRequest" });
+
     const { data } = await axios.get(`${server}/shop/getSeller`, {
       withCredentials: true,
     });
+
     dispatch({
       type: "LoadSellerSuccess",
       payload: data.seller,
     });
   } catch (error) {
+    let errorMessage;
+
+    if (error.response) {
+      // Server responded with a status other than 2xx
+      errorMessage = error.response.data.message || 'Something went wrong!';
+    } else if (error.request) {
+      // Request was made but no response was received
+      errorMessage = 'No response received from server. Please check your network.';
+    } else {
+      // Something happened in setting up the request
+      errorMessage = error.message || 'An error occurred while making the request.';
+    }
+
     dispatch({
       type: "LoadSellerFail",
-      payload: error.response.data.message,
+      payload: errorMessage,
     });
   }
 };
