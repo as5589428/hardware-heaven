@@ -5,8 +5,6 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-
-
 app.use(express.json());
 // const __dirname=path.dirname("")
 const buildpath = path.join(__dirname,"../frontend/build")
@@ -25,10 +23,10 @@ app.use(
   })
 );
 
-app.use(cors({
-  origin: 'https://hardware-heaven-app1.vercel.app/',
-  credentials: true
-}));
+// app.use(cors({
+//   origin: 'https://hardware-heaven-app1.vercel.app/',
+//   credentials: true
+// }));
 
 app.use(express.json());
 app.use(cookieParser());
