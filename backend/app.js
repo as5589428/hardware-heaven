@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin:"http://hardware-heaven-app1.vercel.app/",
+  "origin":"*",
   credentials: true
 }));
 
