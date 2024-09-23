@@ -5,30 +5,45 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
-
-// Middleware to parse JSON
 app.use(express.json());
+// const __dirname=path.dirname("")
+const buildpath = path.join(__dirname,"../frontend/build")
+app.use(express.static(buildpath));
+// app.use(express.static(buildpath));
+app.use("/test", (req, res) => {
+  res.send("Hello world from app.js!");
+});
 
-// Set the build path for serving static files from the frontend
-const buildPath = path.join(__dirname, "../frontend/build");
-app.use(express.static(buildPath));
-
-// CORS configuration
+// app.use("/",express.static("uploads"));
 app.use(
   cors({
-    origin: 'https://hardware-heaven-app1.vercel.app', // Allow your frontend origin
-    methods: ["POST", "GET"], // Allowed methods
-    credentials: true, // Allow credentials (cookies)
+   "origin": "*", //Aws Server ip Frontend e.g 3000
+    methods:["POST","GET"],   
+    credentials: true,
   })
 );
-
-// Middleware for parsing cookies
 app.use(cookieParser());
+// app.use(cors({
+//   origin: 'https://hardware-heaven-app1.vercel.app/',
+//   credentials: true
+// }));
 
-// Middleware for URL-encoded data
+// app.use(express.json());
+// app.use(cookieParser());
+// app.use("/", (req, res) => {
+//   res.send("Hello world!");
+// });
+
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
-// Import routes
+// config
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({
+    path: "config/.env",
+  });
+}
+
+// import routes
 const user = require("./controller/user");
 const shop = require("./controller/shop");
 const product = require("./controller/product");
@@ -40,7 +55,6 @@ const conversation = require("./controller/conversation");
 const message = require("./controller/message");
 const withdraw = require("./controller/withdraw");
 
-// Define API routes
 app.use("/api/v2/user", user);
 app.use("/api/v2/conversation", conversation);
 app.use("/api/v2/message", message);
@@ -52,19 +66,7 @@ app.use("/api/v2/coupon", coupon);
 app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
 
-// Health check route for testing
-app.use("/test", (req, res) => {
-  res.send("Hello world from app.js!");
-});
-
-// Error handling middleware
+// it's for ErrorHandling
 app.use(ErrorHandler);
-
-// Environment variables setup
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({
-    path: "config/.env",
-  });
-}
 
 module.exports = app;
