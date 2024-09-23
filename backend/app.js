@@ -8,20 +8,29 @@ const PORT = 8000
 const path = require("path");
 // var app = express();
 
+
+app.use(express.json());
+// const __dirname=path.dirname("")
+const buildpath = path.join(__dirname,"../frontend/build")
+app.use(express.static(buildpath));
+app.use(express.static(buildpath));
+app.use("/test", (req, res) => {
+  res.send("Hello world from app.js!");
+});
+app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", //Aws Server ip Frontend e.g 3000
+   " origin": "*", //Aws Server ip Frontend e.g 3000
     methods:["POST","GET"],   
     credentials: true,
   })
 );
 
-app.use(express.json());
-app.use(cookieParser());
-app.use("/",express.static(path.join(__dirname, "./uploads")));
-app.use("/test", (req, res)=> {
-  res.send("Hello worlds!");
-});
+
+// app.use("/",express.static(path.join(__dirname, "./uploads")));
+// app.use("/test", (req, res)=> {
+//   res.send("Hello worlds!");
+// });
 
 
 
