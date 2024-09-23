@@ -14,7 +14,7 @@ app.use("/test", (req, res) => {
   res.send("Hello world from app.js!");
 });
 app.use(cookieParser());
-app.use("/",express.static("uploads"));
+// app.use("/",express.static("uploads"));
 app.use(
   cors({
    "origin": "*", //Aws Server ip Frontend e.g 3000
