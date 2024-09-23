@@ -4,35 +4,17 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const path = require("path");
+
+app.use(cors({
+  origin:"http://localhost:3000",
+  credentials: true
+}));
+
 app.use(express.json());
-// const __dirname=path.dirname("")
-const buildpath = path.join(__dirname,"../frontend/build")
-app.use(express.static(buildpath));
-// app.use(express.static(buildpath));
-app.use("/test", (req, res) => {
-  res.send("Hello world from app.js!");
-});
-
-// app.use("/",express.static("uploads"));
-app.use(
-  cors({
-   "origin": "*", //Aws Server ip Frontend e.g 3000
-    methods:["POST","GET"],   
-    credentials: true,
-  })
-);
 app.use(cookieParser());
-// app.use(cors({
-//   origin: 'https://hardware-heaven-app1.vercel.app/',
-//   credentials: true
-// }));
-
-// app.use(express.json());
-// app.use(cookieParser());
-// app.use("/", (req, res) => {
-//   res.send("Hello world!");
-// });
+app.use("/test", (req, res) => {
+  res.send("Hello world!");
+});
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
