@@ -20,7 +20,7 @@ app.use("/test", (req, res) => {
 app.use(cookieParser());
 app.use(
   cors({
-   "origin": "https://hardware-heaven-backend.vercel.app/", //Aws Server ip Frontend e.g 3000
+   "origin": "*", //Aws Server ip Frontend e.g 3000
     methods:["POST","GET"],   
     credentials: true,
   })
