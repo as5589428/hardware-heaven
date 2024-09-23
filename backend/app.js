@@ -13,7 +13,7 @@ app.use(express.static(buildpath));
 app.use("/test", (req, res) => {
   res.send("Hello world from app.js!");
 });
-app.use(cookieParser());
+
 // app.use("/",express.static("uploads"));
 app.use(
   cors({
@@ -22,17 +22,17 @@ app.use(
     credentials: true,
   })
 );
-
+app.use(cookieParser());
 // app.use(cors({
 //   origin: 'https://hardware-heaven-app1.vercel.app/',
 //   credentials: true
 // }));
 
-app.use(express.json());
-app.use(cookieParser());
-app.use("/", (req, res) => {
-  res.send("Hello world!");
-});
+// app.use(express.json());
+// app.use(cookieParser());
+// app.use("/", (req, res) => {
+//   res.send("Hello world!");
+// });
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
