@@ -4,30 +4,40 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const path = require("path");
 
-// Middleware
+app.use(cors({
+  origin: 'http://13.234.122.67',
+
+  credentials: true // Allow credentials
+}));
 app.use(express.json());
 app.use(cookieParser());
+
+
+app.use("/test", (req, res) => {
+  res.send("Hello world!");
+});
+
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
-// CORS Configuration
-app.use(cors({
-    origin: "*", // Replace with your frontend URL if needed
-    methods: ["POST", "GET"],
-    credentials: true,
-}));
 
-// Serve static files from the React app
-const buildPath = path.join(__dirname, "../frontend/build");
-app.use(express.static(buildPath));
+const PORT = 8000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+// config
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({
+    path: "config/.env",
+  });
+}
 
-// API Routes
+// import routes
 const user = require("./controller/user");
 const shop = require("./controller/shop");
 const product = require("./controller/product");
 const event = require("./controller/event");
-const coupon = require("./controller/couponCode");
+const coupon = require("./controller/coupounCode");
 const payment = require("./controller/payment");
 const order = require("./controller/order");
 const conversation = require("./controller/conversation");
@@ -45,26 +55,7 @@ app.use("/api/v2/coupon", coupon);
 app.use("/api/v2/payment", payment);
 app.use("/api/v2/withdraw", withdraw);
 
-// Error Handling Middleware
+// it's for ErrorHandling
 app.use(ErrorHandler);
-
-// Start Server
-const PORT = process.env.PORT || 8000; // Use environment variable for PORT
-const server = app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
-
-// Handle Uncaught Exceptions and Promise Rejections
-process.on("uncaughtException", (err) => {
-    console.log(`Error: ${err.message}`);
-    console.log(`Shutting down the server for handling uncaught exception`);
-});
-
-process.on("unhandledRejection", (err) => {
-    console.log(`Shutting down the server for ${err.message}`);
-    server.close(() => {
-        process.exit(1);
-    });
-});
 
 module.exports = app;
