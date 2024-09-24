@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `http://13.234.122.67/activation/${activationToken}`;
 //Aws link Will be here frontend Port
     try {
       await sendMail({
