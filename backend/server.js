@@ -7,7 +7,7 @@ const cloudinary = require("cloudinary");
 
 app.use("/", (req, res) => {
   
-  res.send("Hello world from server.js");
+  res.send("Hello world from Backend Server");
 });
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {

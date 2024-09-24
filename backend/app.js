@@ -6,18 +6,24 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  "origin":"*",
-  credentials: true
+  origin: 'http://localhost:3000', // Specify your frontend origin here
+  credentials: true // Allow credentials
 }));
-
 app.use(express.json());
 app.use(cookieParser());
+
+
 app.use("/test", (req, res) => {
   res.send("Hello world!");
 });
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
+
+const PORT = 8000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
