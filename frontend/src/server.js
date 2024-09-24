@@ -1,4 +1,4 @@
-export const server = "http://13.201.191.172:8000/api/v2";
+export const server = "http://43.201.47.227:8000/api/v2";
 
-// export const backend_url = "http://localhost:8000";
+// export const backend_url = "https://hardware-heaven-backend.vercel.app";
 

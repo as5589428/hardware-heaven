@@ -6,8 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: 'http://65.2.144.240',
-
+  origin: 'http://54.180.236.97:3000', // Specify your frontend origin here
   credentials: true // Allow credentials
 }));
 app.use(express.json());
