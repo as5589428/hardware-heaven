@@ -14,26 +14,37 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    await axios
-      .post(
+  
+    try {
+      const res = await axios.post(
         `${server}/user/login-user`,
         {
           email,
           password,
         },
         { withCredentials: true }
-      )
-      .then((res) => {
-        toast.success("Login Success!");
-        navigate("/");
-        window.location.relaoad();
-      })
-      .catch((err) => {
-        toast.error(err.response.data.message);
-      });
+      );
+      toast.success("Login Success!");
+      navigate("/");
+      window.location.reload();
+    } catch (err) {
+      let errorMessage = 'An unexpected error occurred.';
+  
+      if (err.response) {
+        // The server responded with an error
+        errorMessage = err.response.data.message || err.response.statusText;
+      } else if (err.request) {
+        // The request was made but no response was received
+        errorMessage = 'No response received from the server.';
+      } else {
+        // Something happened in setting up the request
+        errorMessage = `Error: ${err.message}`;
+      }
+  
+      toast.error(errorMessage);
+    }
   };
-
+  
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
